@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+  <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="loginForm" action="/api/login" method="POST">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+    </div>
+    <button type="submit">Login</button>
+  </form>
+
+  <div class="error" id="errorMessage" style="display:none;">
+    Invalid username or password.
+  </div>
+
+  <div class="register-link">
+    <p>Don't have an account? <a href="/signup">Register here</a></p>
+  </div>
+</div>
+
+<script src="../static/js/login.js"></script>
+</body>
+</html>
