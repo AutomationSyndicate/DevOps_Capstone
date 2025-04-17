@@ -31,21 +31,22 @@ public class UserController {
     public List<User> getUsers() {
         return userRepository.findAll();
     }
-    @PostMapping("/save")
-    public String saveUser(User user){
-        userRepository.save(user);
-        return "User added";
-    }
 
-    @PutMapping("update/{id}")
-    public String updateUser(@PathVariable Long id, @RequestBody User user){
-        User updatedUser = userRepository.findById(id).get();
-        updatedUser.setUsername(user.getUsername());
-        updatedUser.setEmail(user.getEmail());
-        updatedUser.setPassword(user.getPassword());
-        userRepository.save(updatedUser);
-        return "User updated";
-    }
+//    @PostMapping("/save")
+//    public String saveUser(User user){
+//        userRepository.save(user);
+//        return "User added";
+//    }
+//
+//    @PutMapping("update/{id}")
+//    public String updateUser(@PathVariable Long id, @RequestBody User user){
+//        User updatedUser = userRepository.findById(id).get();
+//        updatedUser.setUsername(user.getUsername());
+//        updatedUser.setEmail(user.getEmail());
+//        updatedUser.setPassword(user.getPassword());
+//        userRepository.save(updatedUser);
+//        return "User updated";
+////    }
 
 //    @GetMapping("/req/signup")
 //    public String signup() {
