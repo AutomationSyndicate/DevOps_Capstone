@@ -5,11 +5,15 @@
 </head>
 <body>
 <h2>Sign Up</h2>
-<form method="post" action="/req/signup">
-    <label>ID: <input type="number" name="id"/></label><br/>
-    <label>First Name: <input type="text" name="firstName"/></label><br/>
-    <label>Last Name: <input type="text" name="lastName"/></label><br/>
+<form method="post" action="/signup">
+    <label>Username: <input type="text" name="username" required /></label><br/>
+    <label>Email: <input type="email" name="email" required /></label><br/>
+    <label>Password: <input type="password" name="password" required /></label><br/>
     <button type="submit">Sign Up</button>
 </form>
+
+<div th:if="${param.error}">
+    <p style="color:red;">Username or email already exists.</p>
+</div>
 </body>
 </html>
