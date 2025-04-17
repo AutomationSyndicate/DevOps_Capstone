@@ -14,8 +14,8 @@ public class SignupController {
     @Autowired
     private UserRepository userRepository;
 
-    //Password encoding, will add later
-   // private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @PostMapping("/signup")
     public String registerUser(
@@ -30,7 +30,7 @@ public class SignupController {
         User user = new User();
         user.setUsername(username);
         user.setEmail(email);
-        user.setPassword(password);
+        user.setPassword(passwordEncoder.encode(password));
         user.setRole("ROLE_USER"); // default role
         userRepository.save(user);
 
