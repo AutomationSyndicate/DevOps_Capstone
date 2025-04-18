@@ -20,4 +20,9 @@ public class ViewController {
     public String home() {
         return "login"; // optional
     }
+
+    @GetMapping("/dashboard")
+    public String dashboardPage() {
+        return "dashboard";
+    }
 }

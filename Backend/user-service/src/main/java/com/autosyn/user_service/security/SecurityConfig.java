@@ -29,10 +29,15 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/req/signup", "/signup", "/login", "/users", "/css/**").permitAll()
+                        .requestMatchers("/dashboard").hasRole("USER")
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        .loginPage("/login") // use our custom login.html
+                        .loginPage("/login")
+                        .loginProcessingUrl("/login")
+                        .defaultSuccessUrl("/dashboard", true)
+                        .usernameParameter("email")
+                        .passwordParameter("password")
                         .permitAll()
                 )
                 .logout(LogoutConfigurer::permitAll);
