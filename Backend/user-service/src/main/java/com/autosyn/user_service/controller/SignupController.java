@@ -36,21 +36,4 @@ public class SignupController {
 
         return "redirect:/login?signup=success";
     }
-
-//    @Autowired
-//    private UserRepository userRepository;
-//
-//    @PostMapping("/signup")
-//    public RedirectView registerUser(@ModelAttribute User user) {
-//        if (userRepository.existsByEmail(user.getEmail())) {
-//            return new RedirectView("/signup?error=email");
-//        }
-//        user.setEmail(user.getEmail());
-//        user.setUsername(user.getUsername());
-//        user.setPassword(user.getPassword());
-//        user.setRole("ROLE_USER");
-//
-//        userRepository.save(user);
-//        return new RedirectView("/login");
-//    }
 }
