@@ -4,11 +4,15 @@
     <title>Dashboard</title>
 </head>
 <body>
-<h2>Welcome to your dashboard</h2>
+<h2>Welcome to your Dashboard</h2>
 
-<p th:text="'Hello, ' + ${#authentication.name} + '!'"></p>
-<p th:text="'Role: ' + ${#authentication.authorities}"></p>
+<!-- This shows the currently logged-in user's email -->
+<p th:text="'Hello, ' + ${#authentication.name} + '!'">Hello, User!</p>
+
+<!-- This shows the user's roles -->
+<p th:text="'Your roles: ' + ${#authentication.authorities}">Your roles: [ROLE_USER]</p>
 
 <a th:href="@{/logout}">Logout</a>
 </body>
 </html>
+
