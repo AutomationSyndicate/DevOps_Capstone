@@ -2,9 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css" />
+
 </head>
 <body>
-<h2>Sign Up</h2>
+<h2 class="signuptitle">Sign Up</h2>
 <form method="post" th:action="@{/signup}">
     <label>Username: <input type="text" name="username" required /></label><br/>
     <label>Email: <input type="email" name="email" required /></label><br/>

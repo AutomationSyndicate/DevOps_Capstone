@@ -36,4 +36,5 @@ public class SignupController {
 
         return "redirect:/login?signup=success";
     }
+
 }
