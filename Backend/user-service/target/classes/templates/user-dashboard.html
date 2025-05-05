@@ -4,6 +4,8 @@
 <body>
 <h2>User Dashboard</h2>
 <p th:text="'Welcome, ' + ${#authentication.name}"></p>
+<br>
+<p th:text="'Details, ' + ${#authentication.details}"></p>
 <p>This is the user area.</p>
 <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>

@@ -31,7 +31,7 @@ public class SignupController {
         user.setUsername(username);
         user.setEmail(email);
         user.setPassword(passwordEncoder.encode(password));
-        user.setRole("ROLE_USER"); // default role
+        user.setRole("ROLE_USER");
         userRepository.save(user);
 
         return "redirect:/login?signup=success";
