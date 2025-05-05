@@ -20,10 +20,10 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/users")
-    public List<User> getUsers() {
-        return userRepository.findAll();
-    }
+//    @GetMapping("/users")
+//    public List<User> getUsers() {
+//        return userRepository.findAll();
+//    }
 
 }
 
