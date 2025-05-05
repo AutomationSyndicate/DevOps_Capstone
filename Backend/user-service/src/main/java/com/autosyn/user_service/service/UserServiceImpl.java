@@ -28,14 +28,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUser(User user) {
-        Optional<User> existingUserOpt = userRepository.findByEmail(user.getEmail());
+        Optional<User> existingUserOpt = userRepository.findById(user.getId());
         if ((existingUserOpt).isPresent()) {
             User existingUser = existingUserOpt.get();
 
             existingUser.setUsername(user.getUsername());
             existingUser.setEmail(user.getEmail());
 
-            existingUser.setRole(existingUser.getRole());
+            existingUser.setRole(user.getRole());
             existingUser.setPassword(existingUser.getPassword());
 
             userRepository.save(existingUser);

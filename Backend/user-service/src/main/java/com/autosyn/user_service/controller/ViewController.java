@@ -31,6 +31,11 @@ public class ViewController {
         return "signup";
     }
 
+    @GetMapping("/req/signup")
+    public String adminSignupPage() {
+        return "admin-signup";
+    }
+
     @GetMapping("/")
     public String home() {
         return "login"; // optional
@@ -133,12 +138,12 @@ public class ViewController {
     @PostMapping("/user/update")
     public String updateUser(@ModelAttribute("user") User user) {
         userService.updateUser(user);
-        return "redirect:/users";  // Redirect back to the Manage Users page after deletion
+        return "redirect:/users";
     }
 
     @PostMapping("/user/delete/{id}")
     public String deleteUser(@PathVariable Long id) {
         userService.deleteUserById(id);
-        return "redirect:/users";  // Redirect back to the Manage Users page after deletion
+        return "redirect:/users";
     }
 }
