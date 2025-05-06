@@ -1,72 +1,104 @@
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Shared reset and layout */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3f4f6;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-.login-container {
-    background-color: white;
+
+.form-container {
+    background: white;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 435px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
+/* Inputs */
 label {
-    display: block;
-    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    color: #555;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 0.5rem;
+input {
+    padding: 0.6rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 0.3rem;
 }
 
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px #007bff88;
+}
+
+/* Button */
 button {
-    width: 100%;
-    padding: 0.5rem;
     background-color: #007bff;
     color: white;
+    padding: 0.75rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+/* Messages */
 .error {
     color: red;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.register-link {
-    margin-top: 1rem;
+    font-size: 0.95rem;
     text-align: center;
 }
 
-.register-link a {
+.message {
+    color: green;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Links */
+a.link {
+    display: block;
+    text-align: center;
     color: #007bff;
     text-decoration: none;
+    margin-top: 0.5rem;
 }
 
-.register-link a:hover {
+a.link:hover {
     text-decoration: underline;
 }
+

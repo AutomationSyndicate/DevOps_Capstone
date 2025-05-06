@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>AdminSignUp</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/signup.css" />
+
+</head>
+<body>
+
+<form method="post" th:action="@{/req/signup}">
+  <h2 class="signuptitle">Admin SignUp</h2>
+  <label>Username: <input type="text" name="username" required /></label><br/>
+  <label>Email: <input type="email" name="email" required /></label><br/>
+  <label>Password: <input type="password" name="password" required /></label><br/>
+  <button type="submit">Add New Admin</button>
+</form>
+
+<div th:if="${param.error}">
+  <p style="color:red;">Admin Username or email already exists.</p>
+  <a th:href="@{/login}">Login</a>
+</div>
+</body>
+</html>

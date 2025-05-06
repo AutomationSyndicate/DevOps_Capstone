@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>User Dashboard</title></head>
+<body>
+<h2>User Dashboard</h2>
+<p th:text="'Welcome, ' + ${#authentication.name}"></p>
+<p>This is the user area.</p>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

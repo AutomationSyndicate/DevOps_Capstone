@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background: #f8f8f8;
+}
+
+h2 {
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td a {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+form {
+    display: inline;
+}

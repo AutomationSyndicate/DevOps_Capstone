@@ -2,10 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Sign Up</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+
 </head>
 <body>
-<h2>Sign Up</h2>
-<form method="post" action="/signup">
+
+<form method="post" th:action="@{/signup}">
+    <h2 class="signuptitle">Sign Up</h2>
     <label>Username: <input type="text" name="username" required /></label><br/>
     <label>Email: <input type="email" name="email" required /></label><br/>
     <label>Password: <input type="password" name="password" required /></label><br/>
@@ -14,6 +19,7 @@
 
 <div th:if="${param.error}">
     <p style="color:red;">Username or email already exists.</p>
+    <a th:href="@{/login}">Login</a>
 </div>
 </body>
 </html>
